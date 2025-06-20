@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Schedule Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Schedule Manager</h1>
+        <div>
+            <input type="time" id="timeInput" required>
+            <button onclick="addTime()">Add Time</button>
+        </div>
+        <h2>Scheduled Times</h2>
+        <ul id="scheduleList"></ul>
+    </div>
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.9.1/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.9.1/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+            apiKey: "AIzaSyBgHHmXXRkqfQxs7HRqfQvIJkwK5kq9vuQ",
+            authDomain: "iotbasedplantwateringsystem.firebaseapp.com",
+            projectId: "iotbasedplantwateringsystem",
+            storageBucket: "iotbasedplantwateringsystem.firebasestorage.app",
+            messagingSenderId: "591617339211",
+            appId: "1:591617339211:web:51e2a390937a064a4242ce",
+            measurementId: "G-NEX5420GGQ"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+    
+    </script>
+    <script src="index.js"></script>
+</body>
+
+</html>
