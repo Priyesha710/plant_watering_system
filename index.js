@@ -1,5 +1,6 @@
 const API_BASE = 'https://irrigation-backend-rjv7.onrender.com/api';
-
+//initializing the database
+var database = firebase.database();
         // Global schedule variable
         let schedule = [];
 
