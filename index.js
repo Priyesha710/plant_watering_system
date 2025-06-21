@@ -5,6 +5,7 @@ const API_BASE = 'https://irrigation-backend-rjv7.onrender.com/api';
 
         // Load schedule from API
         async function loadSchedule() {
+            console.log("Trying to get from ${API_BASE}/schedules ")
             try {
                 const response = await axios.get(`${API_BASE}/schedules`);
                 schedule = response.data;
@@ -12,7 +13,6 @@ const API_BASE = 'https://irrigation-backend-rjv7.onrender.com/api';
                 displaySchedule();
                 console.log('Schedule loaded:', schedule);
             } catch (error) {
-                console.log("Tried, but failed to get from ${API_BASE}/schedules ")
                 console.error('Error loading schedule:', error);
                 schedule = [];
                 displaySchedule();
