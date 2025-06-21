@@ -1,5 +1,5 @@
-const API_BASE = 'https://irrigation-backend-rjv7.onrender.com';
-console.log(API_BASE);
+const API_BASE = 'https://irrigation-backend-rjv7.onrender.com/api';
+
         // Global schedule variable
         let schedule = [];
 
