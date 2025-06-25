@@ -1,4 +1,16 @@
 // Manual irrigation control
+var firebaseConfig = {
+    apiKey: "AIzaSyBgHHmXXRkqfQxs7HRqfQvIJkwK5kq9vuQ",
+    authDomain: "iotbasedplantwateringsystem.firebaseapp.com",
+    databaseURL: "https://iotbasedplantwateringsystem-default-rtdb.firebaseio.com",
+    projectId: "iotbasedplantwateringsystem",
+    storageBucket: "iotbasedplantwateringsystem.firebasestorage.app",
+    messagingSenderId: "591617339211",
+    appId: "1:591617339211:web:51e2a390937a064a4242ce",
+    measurementId: "G-NEX5420GGQ"
+};
+firebase.initializeApp(firebaseConfig);
+var database = firebase.database();
 async function toggleIrrigation(action) {
     try {
         //Update Database
