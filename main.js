@@ -34,7 +34,7 @@ async function toggleIrrigation(action) {
 async function getStatus() {
     try {
 
-        database.ref('/status').on("value", function (data) {
+        database.ref('/state').on('value', function (data) {
             const status = data.val();
             console.log(status);
             const statusDiv = document.getElementById('irrigationStatus');
