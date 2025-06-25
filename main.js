@@ -38,6 +38,7 @@ async function getStatus() {
         database.ref('/status').on("value", function(data){
             status = data.val();
         });
+        console.log(status);
         const statusDiv = document.getElementById('irrigationStatus');
         statusDiv.textContent = `Status: ${status.toUpperCase()}`;
         statusDiv.className = `status ${status}`;
