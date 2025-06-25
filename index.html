@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <script>
+    <script type="module">
         import { initializeApp } from "firebase/app";
         import { getDatabase, ref, set } from "firebase/database";
         var firebaseConfig = {
@@ -25,7 +25,8 @@
             appId: "1:591617339211:web:51e2a390937a064a4242ce",
             measurementId: "G-NEX5420GGQ"
         };
-
+    </script>
+    <script>
         // Initialize Firebase
         const app = initializeApp(firebaseConfig);
         // Inititalize Realtime Database and get a reference to the service
