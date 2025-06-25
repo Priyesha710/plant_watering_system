@@ -23,7 +23,7 @@ async function getStatus() {
     try {
         const responseRef = database.ref('/');
         responseRef.on("value", function (data) {
-            response = data.val();
+            status = data.val();
         })
         const statusDiv = document.getElementById('irrigationStatus');
         const status = response.data.status;
