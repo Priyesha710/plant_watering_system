@@ -1,12 +1,9 @@
-//initialize the database
-database = firebase.database();
-console.log('Database initialized.')
-
 // Manual irrigation control
 async function toggleIrrigation(action) {
     try {
+        //Update Database
         database.ref('/').update({
-            State: action
+            state: action
         })
         // Update status display
         const statusDiv = document.getElementById('irrigationStatus');
