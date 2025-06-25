@@ -32,13 +32,13 @@ async function toggleIrrigation(action) {
 }
 // Get current irrigation status
 async function getStatus() {
+    var status;
     try {
-        const responseRef = database.ref('/');
-        responseRef.on("value", function (data) {
+        
+        database.ref('/status').on("value", function(data){
             status = data.val();
-        })
+        });
         const statusDiv = document.getElementById('irrigationStatus');
-        const status = response.data.status;
         statusDiv.textContent = `Status: ${status.toUpperCase()}`;
         statusDiv.className = `status ${status}`;
     } catch (error) {
