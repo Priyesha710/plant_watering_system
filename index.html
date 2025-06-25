@@ -9,9 +9,12 @@
     <!--Database libraries-->
     <script src="https://www.gstatic.com/firebasejs/6.3.4/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-database.js"></script>
+</head>
+
+<body>
     <script>
         import { initializeApp } from "firebase/app";
-        import { getDatabase, ref, set} from "firebase/database";
+        import { getDatabase, ref, set } from "firebase/database";
         var firebaseConfig = {
             apiKey: "AIzaSyBgHHmXXRkqfQxs7HRqfQvIJkwK5kq9vuQ",
             authDomain: "iotbasedplantwateringsystem.firebaseapp.com",
@@ -28,9 +31,6 @@
         // Inititalize Realtime Database and get a reference to the service
         const database = getDatabase(app);
     </script>
-</head>
-
-<body>
     <script src="main.js"></script>
     <div class="container">
         <h1>🌱 IoT Irrigation System</h1>
